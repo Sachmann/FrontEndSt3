@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quizzy</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="space"></div>
+    <div class="container">
+      <div class="leftSide">
+        <img
+          src="https://static.vecteezy.com/system/resources/thumbnails/002/002/247/small_2x/beautiful-black-woman-avatar-character-icon-free-vector.jpg"
+          class="imageAvatar"
+          alt="avatar"
+        />
+        <h1 class="heading1">Welcome To Quizzy</h1>
+      </div>
+
+      <div class="rightSide">
+        <h2 class="heading2">
+          Times up!!!
+          test Submitted
+        </h2>
+        <hr>
+        <h2 id = "NAME"></h2>
+        <div class="score" id = "score"></div>
+      </div>
+    </div>
+    <script>
+        window.onload = function(){
+        const str = `NAME : ${sessionStorage.getItem('Name')}\n RollNumber : ${sessionStorage.getItem('RollNo')}`
+        const name = document.getElementById('NAME');
+        name.innerText = str;
+        let score = ` you scored ${sessionStorage.getItem('marks')}/10 \n Unattempted : ${sessionStorage.getItem('una')}`
+        const sc = document.getElementById('score');
+        sc.innerText = score;}
+    </script>
+
+    </script>
+  </body>
+</html>

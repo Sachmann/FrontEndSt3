@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 70%;
+            width: 70%;
+            margin: auto;
+            font-family: "Cinzel", serif;
+            border: 2px solid black;
+            display: flex;
+            border-radius: 30px;
+        }
+
+        .space {
+            height: 10rem;
+        }
+
+        .leftSide {
+            width: 40%;
+            text-align: center;
+            background-color: #f9bc2c;
+            border-radius: 30px 0 0 30px;
+        }
+
+        .leftSide .imageAvatar {
+            top: 3rem;
+            padding: 2rem;
+            height: 8rem;
+            width: 8rem;
+            border-radius: 50%;
+        }
+
+        .rightSide {
+            width: 50%;
+            padding: 3rem;
+        }
+
+        .rightSide .heading2 {
+            text-align: center;
+        }
+
+        .rightSide .score {
+            padding: 15rem;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="space"></div>
+    <div class="container">
+        <div class="leftSide">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/002/002/247/small_2x/beautiful-black-woman-avatar-character-icon-free-vector.jpg"
+                class="imageAvatar" alt="avatar" />
+            <h1 class="heading1">Welcome To Quizzy</h1>
+        </div>
+
+        <div class="rightSide">
+            <h2 class="heading2" id="NAME">
+            </h2>
+            <div id="score"></div>
+        </div>
+    </div>
+    <script>
+        window.onload = function(){
+        const str = `NAME : ${sessionStorage.getItem('Name')}\n RollNumber : ${sessionStorage.getItem('RollNo')}`
+        const name = document.getElementById('NAME');
+        name.innerText = str;
+        let score = ` you scored ${sessionStorage.getItem('marks')}/10 \n Wrong Answers = ${10 - sessionStorage.getItem('marks')}`
+        const sc = document.getElementById('score');
+        sc.innerText = score;}
+    </script>
+</body>
+</html>

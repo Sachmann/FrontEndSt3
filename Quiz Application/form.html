@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quizzy</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="space"></div>
+    <div class="container">
+      <div class="leftSide">
+        <img
+          src="https://static.vecteezy.com/system/resources/thumbnails/002/002/247/small_2x/beautiful-black-woman-avatar-character-icon-free-vector.jpg"
+          class="imageAvatar"
+          alt="avatar"
+        />
+        <h1 class="heading1">Welcome To Quizzy</h1>
+      </div>
+
+      <div class="rightSide">
+        <h2 class="heading2">
+          Please Enter your Details to begin with the Quiz
+        </h2>
+
+        <form action = "questions.html">
+          <div class="cont">
+            <label class="field">Enter your name</label>
+            <input class="entry" type="text" placeholder="Sam Codd" id="name" />
+          </div>
+          <div class="cont">
+            <label class="field">Enter your Age</label>
+            <input class="entry" type="number" placeholder="37" id="age" />
+          </div>
+          <div class="cont">
+            <label class="field">Enter your Roll Number</label>
+            <input class="entry" type="number" placeholder="42" id="RollNo" />
+          </div>
+          <input
+            type="submit"
+            class="submitBtn"
+            id="submitBtn"
+            value="Submit Details"
+          />
+        </form>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
